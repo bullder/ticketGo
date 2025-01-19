@@ -12,7 +12,7 @@ class DatabaseSeeder extends Seeder
     final public function run(): void
     {
         // Create 1000 authors
-        Author::factory(100)->create()->each(function ($author) {
+        Author::factory(1000)->create()->each(function ($author) {
             // Create 100-500 posts for each author
             $posts = Post::factory(rand(100, 500))->create([
                 'author_id' => $author->id,
